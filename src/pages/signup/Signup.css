@@ -1,0 +1,82 @@
+.signup-form {
+  width: 520px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0 1% 0;
+  height: 90vh;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.signup-form select,
+select:hover,
+select:active {
+  background: url("../../assets/images/png/pngkit_triangle-vector-png_1867635.png");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+  background-color: white !important;
+  color: #000;
+  border-radius: 0px;
+}
+
+.signup-form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+  border: 1px solid #c8c8c8;
+}
+.signup-form .dropdown-menu.show {
+  width: 100%;
+}
+
+.signup-form .next-button {
+  background-color: #4d6fcc;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  position: relative;
+}
+
+.signup-form .next-button::after {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-left: 10px solid #4d6fcc;
+  border-bottom: 18px solid transparent;
+  content: "";
+  top: 0px;
+  right: -9.5px;
+  position: absolute;
+}
+
+.signup-form .language-section,
+.signup-form .date-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
+  overflow: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.signup-form .language-section.show,
+.signup-form .date-section.show {
+  width: 100%;
+  height: 100%;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.signup-form .language-section.hide,
+.signup-form .date-section.hide {
+  /* Add this class with desired hiding styles */
+  width: 0;
+  height: 0 !important;
+  opacity: 0;
+  transform: translateX(10px);
+}
